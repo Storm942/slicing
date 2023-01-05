@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<string.h>
+void slice(char arr[],int n,int m);
+int main()
+{
+    char word[20];
+    printf("Enter word:\n");
+    scanf("%s",word);
+    slice(word,3,6);
+    
+    return 0;
+}
+void slice(char arr[],int n,int m)
+{
+    char newstr[20];
+    int  j=0;
+    for(int i=n;i<=m;i++,j++)
+    {
+        newstr[j]=arr[i];
+    }
+    newstr[j]='\0';
+    puts(newstr);
+}
